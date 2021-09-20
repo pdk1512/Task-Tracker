@@ -1,24 +1,25 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import { Form, Formik, Field, ErrorMessage } from "formik";
-import {useSelector, useDispatch} from 'react-redux'
+import { useSelector, useDispatch } from "react-redux";
 import * as Yup from "yup";
 import { useHistory } from "react-router-dom";
-import { fetchUsers, loginUserRequest } from "../store";
+import { loginUserRequest } from "../store";
 
 function LoginForm() {
-  const account = useSelector(state => state.user)
-  const dispatch = useDispatch()
+  const account = useSelector((state) => state.user);
+  const dispatch = useDispatch();
   const history = useHistory();
 
   useEffect(() => {
-    if(account.user){
-      history.push('/tasks')
+    if (account.user) {
+      history.push("/tasks");
     }
-  })
+  });
 
   const initialValues = {
     username: "",
     password: "",
+    showpassword: false,
   };
 
   const validationSchema = Yup.object({
@@ -27,7 +28,7 @@ function LoginForm() {
   });
 
   const onSubmit = (values) => {
-    dispatch(loginUserRequest(values.username, values.password))
+    dispatch(loginUserRequest(values.username, values.password));
   };
 
   return (
@@ -36,25 +37,35 @@ function LoginForm() {
       validationSchema={validationSchema}
       onSubmit={onSubmit}
     >
-      <Form>
-        
+      {({values}) => (
+        <Form>
         <div className="form-control">
           <label>Username:</label>
           <Field type="text" name="username" placeholder="Username" />
           <ErrorMessage name="username" component={"div"} className="error" />
         </div>
 
-        <div className="form-control">
+        <div className="form-control ">
           <label>Password</label>
-          <Field type="password" name="password" placeholder="Password" />
+          <Field type={ values.showpassword ? "text" : "password" } name="password" placeholder="Password" />
+          <div className="form-control-check">
+            <Field type="checkbox" name="showpassword" />
+            <label>Show password</label>
+          </div>
           <ErrorMessage name="password" component={"div"} className="error" />
         </div>
 
         {/* Show error login */}
-        {account.error != "" ? <div style={{color: 'red'}}>{account.error}</div> : <></>}
+        {account.error !== "" ? (
+          <div style={{ color: "red" }}>{account.error}</div>
+        ) : (
+          <></>
+        )}
 
         <input type="submit" value="Login" className="btn btn-block" />
       </Form>
+      )}
+      
     </Formik>
   );
 }

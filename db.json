@@ -10,7 +10,7 @@
     {
       "text": "Interviewing for job",
       "time": "Monday 8.am",
-      "reminder": false,
+      "reminder": true,
       "id": 3,
       "userid": 2
     },
@@ -52,7 +52,7 @@
     {
       "text": "Editing video ",
       "time": "8.pm Tomorrow",
-      "reminder": true,
+      "reminder": false,
       "id": 11,
       "userid": 1
     },
@@ -83,6 +83,13 @@
       "time": "Next Friday at 2.pm",
       "reminder": true,
       "id": 16
+    },
+    {
+      "userid": 1,
+      "text": "Set up for the first day at work",
+      "time": "Next Thursday",
+      "reminder": true,
+      "id": 17
     }
   ],
   "users": [

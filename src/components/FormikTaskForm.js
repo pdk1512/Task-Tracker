@@ -2,12 +2,11 @@ import React, { useState, useEffect } from "react";
 import { Form, Formik, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { useHistory, useParams } from "react-router-dom";
-import {useSelector, useDispatch} from 'react-redux';
+import { useSelector } from "react-redux";
 
 function FormikTaskForm({ onAdd, onEdit, getEditTask }) {
   const [editValue, setEditValue] = useState(null);
-  const account = useSelector(state => state.user)
-  const dispatch = useDispatch()
+  const account = useSelector((state) => state.user);
   const history = useHistory();
   const { taskId } = useParams();
 
@@ -48,6 +47,7 @@ function FormikTaskForm({ onAdd, onEdit, getEditTask }) {
   useEffect(() => {
     if (!onAdd) {
       const taskToEdit = getEditTask(taskId);
+      console.log(taskToEdit);
       const { id, ...valueToEdit } = taskToEdit;
       setEditValue(valueToEdit);
     }
@@ -70,11 +70,12 @@ function FormikTaskForm({ onAdd, onEdit, getEditTask }) {
           <label>Time</label>
           <Field type="text" name="time" placeholder="Set Time" />
           <ErrorMessage name="time" component={"div"} className="error" />
+          <div className="form-control-check">
+            <Field type="checkbox" name="reminder" />
+            <label>Set Reminder</label>
+          </div>
         </div>
-        <div className="form-control form-control-check">
-          <label>Set Reminder</label>
-          <Field type="checkbox" name="reminder" />
-        </div>
+
         <input
           type="submit"
           value={onAdd ? "Add task" : "Save task"}

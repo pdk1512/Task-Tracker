@@ -43,7 +43,7 @@ body {
   color: #fff;
   border: none;
   padding: 10px 20px;
-  margin: 5px;
+  margin: 5px 0px;
   border-radius: 5px;
   cursor: pointer;
   text-decoration: none;
@@ -127,7 +127,7 @@ body {
 .form-control input {
   width: 100%;
   height: 40px;
-  margin: 5px;
+  margin: 5px 0px;
   padding: 3px 7px;
   font-size: 17px;
   border-radius: 5px;
@@ -144,11 +144,11 @@ body {
 }
 
 .form-control-check label {
-  flex: 1;
+  flex: 10;
 }
 
 .form-control-check input {
-  flex: 2;
+  flex: 1;
   height: 20px;
 }
 

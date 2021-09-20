@@ -48,11 +48,11 @@ function App() {
     const tastToToggle = await taskApi.getById(id);
     const updateTask = { ...tastToToggle, reminder: !tastToToggle.reminder };
 
-    const response = await taskApi.put(id, updateTask);
+    await taskApi.put(id, updateTask);
 
     setTasks(
       tasks.map((task) =>
-        task.id === id ? { ...task, reminder: !task.reminder } : task
+        task.id == id ? { ...task, reminder: !task.reminder } : task
       )
     );
   };
@@ -67,7 +67,7 @@ function App() {
       reminder: value.reminder,
     };
 
-    const response = await taskApi.put(id, updateTask);
+    await taskApi.put(id, updateTask);
 
     setShowAddTask(!showAddTask);
     setTasks(
