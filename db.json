@@ -1,0 +1,100 @@
+{
+  "tasks": [
+    {
+      "id": 2,
+      "text": "Meeting at school",
+      "time": "Feb 6th at 1:30pm",
+      "reminder": true,
+      "userid": 1
+    },
+    {
+      "text": "Interviewing for job",
+      "time": "Monday 8.am",
+      "reminder": false,
+      "id": 3,
+      "userid": 2
+    },
+    {
+      "text": "Taking final exams",
+      "time": "Dec 15th at 3:00pm",
+      "reminder": true,
+      "id": 5,
+      "userid": 1
+    },
+    {
+      "text": "Cleaning the house",
+      "time": "5.pm Today",
+      "reminder": true,
+      "id": 7,
+      "userid": 2
+    },
+    {
+      "text": "Blood Donation",
+      "time": "Next month",
+      "reminder": false,
+      "id": 8,
+      "userid": 1
+    },
+    {
+      "text": "Go to Da Lat",
+      "time": "This October",
+      "reminder": false,
+      "id": 9,
+      "userid": 1
+    },
+    {
+      "text": "Go to work",
+      "time": "Next day",
+      "reminder": true,
+      "id": 10,
+      "userid": 2
+    },
+    {
+      "text": "Editing video ",
+      "time": "8.pm Tomorrow",
+      "reminder": true,
+      "id": 11,
+      "userid": 1
+    },
+    {
+      "userid": 2,
+      "text": "Learning redux",
+      "time": "This weekend",
+      "reminder": false,
+      "id": 13
+    },
+    {
+      "userid": 1,
+      "text": "Calling for love",
+      "time": "Tonight",
+      "reminder": true,
+      "id": 14
+    },
+    {
+      "userid": 1,
+      "text": "Have a hair cut",
+      "time": "Tomorrow afternoon",
+      "reminder": false,
+      "id": 15
+    },
+    {
+      "userid": 2,
+      "text": "Have a field trip",
+      "time": "Next Friday at 2.pm",
+      "reminder": true,
+      "id": 16
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "khanhpdhe141226",
+      "password": "khanhmon15122k"
+    },
+    {
+      "id": 2,
+      "username": "user",
+      "password": "user"
+    }
+  ]
+}
