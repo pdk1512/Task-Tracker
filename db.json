@@ -24,14 +24,14 @@
     {
       "text": "Cleaning the house",
       "time": "5.pm Today",
-      "reminder": true,
+      "reminder": false,
       "id": 7,
       "userid": 2
     },
     {
       "text": "Blood Donation",
       "time": "Next month",
-      "reminder": false,
+      "reminder": true,
       "id": 8,
       "userid": 1
     },
@@ -74,7 +74,7 @@
       "userid": 1,
       "text": "Have a hair cut",
       "time": "Tomorrow afternoon",
-      "reminder": false,
+      "reminder": true,
       "id": 15
     },
     {
@@ -90,6 +90,34 @@
       "time": "Next Thursday",
       "reminder": true,
       "id": 17
+    },
+    {
+      "userid": 3,
+      "text": "Dating with boyfriend",
+      "time": "This Weekend",
+      "reminder": false,
+      "id": 18
+    },
+    {
+      "userid": 3,
+      "text": "Buy lipstick",
+      "time": "Thursday night",
+      "reminder": true,
+      "id": 19
+    },
+    {
+      "userid": 1,
+      "text": "Learning Material UI",
+      "time": "8.am every morning",
+      "reminder": false,
+      "id": 20
+    },
+    {
+      "userid": 4,
+      "text": "Posting new youtube video",
+      "time": "8.pm",
+      "reminder": false,
+      "id": 21
     }
   ],
   "users": [
@@ -102,6 +130,16 @@
       "id": 2,
       "username": "user",
       "password": "user"
+    },
+    {
+      "username": "shna",
+      "password": "shna",
+      "id": 3
+    },
+    {
+      "username": "chang",
+      "password": "chang",
+      "id": 4
     }
   ]
 }

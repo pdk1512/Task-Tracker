@@ -9,6 +9,7 @@ import Header from "./components/Header";
 import Tasks from "./components/Tasks";
 import LoginForm from "./components/LoginForm";
 import taskApi from "./api/TaskApi";
+import RegisterForm from "./components/RegisterForm";
 
 function App() {
   const [showAddTask, setShowAddTask] = useState(false);
@@ -134,6 +135,10 @@ function App() {
             onEdit={editTask}
             getEditTask={getEditTask}
           />
+        </Route>
+
+        <Route path="/register">
+          <RegisterForm />
         </Route>
 
         <Route path="/about">

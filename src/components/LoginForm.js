@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Form, Formik, Field, ErrorMessage } from "formik";
 import { useSelector, useDispatch } from "react-redux";
 import * as Yup from "yup";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { loginUserRequest } from "../store";
 
 function LoginForm() {
@@ -63,6 +63,8 @@ function LoginForm() {
         )}
 
         <input type="submit" value="Login" className="btn btn-block" />
+        <p style={{textAlign: "center"}}>Don't have an account? <Link to="/register">Register here</Link></p>
+        
       </Form>
       )}
       
