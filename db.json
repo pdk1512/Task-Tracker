@@ -118,6 +118,13 @@
       "time": "8.pm",
       "reminder": false,
       "id": 21
+    },
+    {
+      "userid": 5,
+      "text": "Learning React",
+      "time": "8.am every morning",
+      "reminder": true,
+      "id": 22
     }
   ],
   "users": [
@@ -140,6 +147,11 @@
       "username": "chang",
       "password": "chang",
       "id": 4
+    },
+    {
+      "username": "khanh",
+      "password": "khanh",
+      "id": 5
     }
   ]
 }

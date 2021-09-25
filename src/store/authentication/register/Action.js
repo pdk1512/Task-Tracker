@@ -7,10 +7,9 @@ export const registerUserRequest = (username, password, history) => {
     }
 }
 
-export const registerUserSuccess = (message) => {
+export const registerUserSuccess = () => {
     return {
         type: REGISTER_SUCCESS,
-        payload: message
     }
 }
 

@@ -2,7 +2,6 @@ import { REGISTER_FAIL, REGISTER_SUCCESS, REGISTER_USER } from "./ActionTypes";
 
 const initialState = {
   loading: false,
-  message: "",
   error: "",
 };
 
@@ -16,7 +15,6 @@ const registerReducer = (state = initialState, action) => {
     case REGISTER_SUCCESS:
       return {
         ...state,
-        message: action.payload,
         loading: false,
         error: "",
       };
@@ -24,7 +22,6 @@ const registerReducer = (state = initialState, action) => {
       return {
         ...state,
         error: action.payload,
-        message: "",
         loading: false,
       };
     default: return state

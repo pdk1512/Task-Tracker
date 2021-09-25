@@ -1,10 +1,12 @@
+import { ErrorMessage, Field, Form, Formik } from "formik";
 import React from "react";
-import { Form, Formik, Field, ErrorMessage } from "formik";
-import { useSelector, useDispatch } from "react-redux";
-import {IoMdArrowRoundBack} from 'react-icons/io'
-import * as Yup from "yup";
+import { IoMdArrowRoundBack } from 'react-icons/io';
+import { useDispatch, useSelector } from "react-redux";
 import { Link, useHistory } from "react-router-dom";
+import { FormFeedback } from 'reactstrap';
+import * as Yup from "yup";
 import { registerUserRequest } from "../store/authentication/register/Action";
+
 
 function RegisterForm() {
   const registerState = useSelector((state) => state.register);
@@ -42,7 +44,7 @@ function RegisterForm() {
         <div className="form-control">
           <label>Username:</label>
           <Field type="text" name="username" placeholder="Username" />
-          <ErrorMessage name="username" component={"div"} className="error" />
+          <ErrorMessage name="username" component={FormFeedback} className="error" />
           {/* Show error register */}
           {registerState.error !== "" ? (
             <div style={{ color: "red" }}>{registerState.error}</div>
@@ -54,7 +56,7 @@ function RegisterForm() {
         <div className="form-control ">
           <label>Password</label>
           <Field type="password" name="password" placeholder="Password" />
-          <ErrorMessage name="password" component={"div"} className="error" />
+          <ErrorMessage name="password" component={FormFeedback} className="error" />
         </div>
 
         <div className="form-control ">
@@ -66,7 +68,7 @@ function RegisterForm() {
           />
           <ErrorMessage
             name="confirmPassword"
-            component={"div"}
+            component={FormFeedback}
             className="error"
           />
         </div>

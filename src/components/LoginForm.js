@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import * as Yup from "yup";
 import { Link, useHistory } from "react-router-dom";
 import { loginUserRequest } from "../store";
+import { FormFeedback } from "reactstrap";
 
 function LoginForm() {
   const account = useSelector((state) => state.user);
@@ -42,17 +43,17 @@ function LoginForm() {
         <div className="form-control">
           <label>Username:</label>
           <Field type="text" name="username" placeholder="Username" />
-          <ErrorMessage name="username" component={"div"} className="error" />
+          <ErrorMessage name="username" component={FormFeedback} className="error" />
         </div>
 
         <div className="form-control ">
           <label>Password</label>
           <Field type={ values.showpassword ? "text" : "password" } name="password" placeholder="Password" />
+          <ErrorMessage name="password" component={FormFeedback} className="error" />
           <div className="form-control-check">
             <Field type="checkbox" name="showpassword" />
             <label>Show password</label>
           </div>
-          <ErrorMessage name="password" component={"div"} className="error" />
         </div>
 
         {/* Show error login */}
